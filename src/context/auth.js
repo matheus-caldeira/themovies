@@ -21,16 +21,6 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
   const token = useRef('');
-  //   {
-  //   name: 'Matheus',
-  //   avatar_url: 'https://avatars.githubusercontent.com/u/26012387?v=4',
-  //   username: 'matheus-caldeira',
-  //   public_email: 'matheuscardozo4@gmail.com',
-  //   email: 'matheuscardozo4@gmail.com',
-  //   commit_email: 'matheuscardozo4@gmail.com',
-  //   following: 0,
-  //   followers: 0
-  // });
 
   useEffect(() => {
     async function loadStorageData() {
@@ -61,7 +51,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const generateToken = useCallback(async () => {
-    const callback = 'exp://192.168.153.205:19000/--/app/approved'
+    const callback = 'exp://192.168.149.251:19000/--/app/approved'
     token.current = await Authenticate.createToken();
     Linking.openURL(`https://www.themoviedb.org/authenticate/${token.current}?redirect_to=${callback}`);
   }, [])
