@@ -18,7 +18,7 @@ class Authenticate {
 
   static async signOut() {
     const { session_id } = api.defaults.params;
-    await api.delete('/authentication/session/new', {
+    await api.delete('/authentication/session', {
       session_id
     })
   }

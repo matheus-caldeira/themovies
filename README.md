@@ -27,7 +27,7 @@ const callback = 'exp://192.168.153.205:19000/--/app/approved'
 // para o IP disponivel pelo expo
 ```
 
-Essa alteração acabou sendo necessária, pois o DeepLink não funciona de forma esperada em desenvolvimento.
+Essa alteração acabou sendo necessária, pois estou utilizando meu celular fisico para transmitir internet e usar como emulador, então o DeepLink não funcionou de forma esperada em desenvolvimento.
 
 Em produção ele seria trocado por:
 

@@ -74,8 +74,8 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const singOut = useCallback(async () => {
-    await Authenticate.signOut();
-    await AsyncStorage.multiRemove([KEY_USER, KEY_TOKEN]);
+    Authenticate.signOut();
+    AsyncStorage.multiRemove([KEY_USER, KEY_TOKEN]);
     setUser(null);
   }, []);
 
